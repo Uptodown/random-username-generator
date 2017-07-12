@@ -1,0 +1,15 @@
+{
+    "name": "uptodown/random-username-generator",
+    "description": "A simple random username generator",
+    "authors": [
+        {
+            "name": "Daniel Rivas",
+            "email": "daniel@uptodown.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Uptodown\\RandomUsernameGenerator\\": "src/"
+        }
+    }
+}
