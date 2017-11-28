@@ -1,6 +1,7 @@
 {
     "name": "uptodown/random-username-generator",
     "description": "A simple random username generator",
+    "license" : "MIT",
     "authors": [
         {
             "name": "Daniel Rivas",
