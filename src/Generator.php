@@ -4,12 +4,24 @@ namespace Uptodown\RandomUsernameGenerator;
 
 class Generator
 {
-    public function makeNew() // : string
-    {
-        $randomAdjective = $this->getRandomAdjective();
-        $randomColor = $this->getRandomColor($colors);
-        $randomSubject = $this->getRandomSubject($subjects);
-        $randomNumber = $this->getRandomNumber();
+    /**
+     * @param bool $useAdjectives
+     * @param bool $useColors
+     * @param bool $useRandomSubjects
+     * @param bool $useRandomNumber
+     * @return string
+     */
+    public function makeNew(
+        $useAdjectives = true,
+        $useColors = true,
+        $useRandomSubjects = true,
+        $useRandomNumber = true
+    ) {
+        $randomAdjective = $useAdjectives ? $this->getRandomAdjective() : '';
+        $randomColor = $useColors ? $this->getRandomColor() : '';
+        $randomSubject = $useRandomSubjects ? $this->getRandomSubject() : '';
+        $randomNumber = $useRandomNumber ? $this->getRandomNumber() : '';
+        
         return $randomAdjective . $randomColor . $randomSubject . $randomNumber;
     }
 
