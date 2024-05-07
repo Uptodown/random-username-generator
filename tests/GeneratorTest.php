@@ -5,12 +5,12 @@ use Uptodown\RandomUsernameGenerator\Generator;
 
 class GeneratorTest extends TestCase
 {
-    public function testMakeNew()
+    public function testMakeNew() : void
     {
         $generator = new Generator();
         for ($index = 1; $index < 10000; $index++) {
             $usernames[] = $generator->makeNew();
         }
-        $this->assertTrue(count(array_unique($usernames)) === count($usernames));
+        self::assertCount(count(array_unique($usernames)), $usernames);
     }
 }
